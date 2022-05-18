@@ -1,0 +1,13 @@
+.tradeable-symbols div:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
+
+.tradeable-symbols div {
+  padding: 1rem;
+  background-color: white;
+}
+
+.tradeable-symbols div:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}

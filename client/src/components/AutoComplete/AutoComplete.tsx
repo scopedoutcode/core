@@ -11,22 +11,23 @@ function AutoComplete() {
   const [selectedSymbol, setSelectedSymbol] = useState('')
   
   async function handleSearchTextChange(e: React.ChangeEvent){
-    const newSearchText = (e.target as HTMLInputElement).value
+    const newSearchText = (e?.target as HTMLInputElement)?.value
     if (!newSearchText) {
       return setTradeableSymbols([])
     }
     try {
-      const secs: ITradeableSymbol[] = await API.searchTradeableSymbols(newSearchText)
-      setTradeableSymbols(secs)
+      const symbols: ITradeableSymbol[] = await API.searchTradeableSymbols(newSearchText)
+      setTradeableSymbols(symbols)
     }catch(e) {
       setTradeableSymbols([])
     }
   }
 
   function handleSymbolSelect(e: React.MouseEvent) {
-    const symbol = (e.target as HTMLElement).id
+    const symbol = (e?.target as HTMLElement)?.id
     setSelectedSymbol(symbol)
     setTradeableSymbols([])
+    formRef?.current?.reset()
   }
 
   return (

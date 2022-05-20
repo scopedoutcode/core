@@ -1,4 +1,4 @@
-import { ITradeableSymbol } from './types'
+import { ITradeableSymbol } from '../../models'
 
 export const transformTradeableSymbols = (arrayFromAPI: any): Array<ITradeableSymbol> => {
   return arrayFromAPI

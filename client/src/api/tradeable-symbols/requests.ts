@@ -2,7 +2,7 @@ import {
     SEARCH_TRADEABLE_SYMBOLS_ENDPOINT
 } from './endpoints';
 import { get } from '../actions';
-import { transformTradeableSymbols } from '../../models';
+import { transformTradeableSymbols } from './transformer';
 
 export const searchTradeableSymbols = async (query: string) => {
     try {

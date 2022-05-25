@@ -1,12 +1,12 @@
-import { FormEvent, useRef, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import * as API from '../../api';
-import { ITradeableSymbol } from '../../models';
+import { FormEvent, useRef, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import * as API from '../../api'
+import { ITradeableSymbol } from '../../models'
 import './AutoComplete.css'
 
 function AutoComplete() {
   const formRef = useRef<HTMLFormElement>(null)
-  const I18n = useTranslation();
+  const I18n = useTranslation()
   const [tradeableSymbols, setTradeableSymbols] = useState<ITradeableSymbol[]>([])
   const [selectedSymbol, setSelectedSymbol] = useState('')
   

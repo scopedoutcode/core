@@ -1,10 +1,42 @@
 :root {
-  --main-theme: #007171;
-  --main-theme-2: #6DB43F;
+  --azure: #007FFF;
+  --bayern-blue: #0066b2;
+  --blue-grey: #6699CC;
+  --airbnb-red: #fd5c63;
+  --cardinal-red: #C41E3A;
+  --easy-grey: #F8F8F8;
+}
+
+.bg-azure {
+  background-color: var(--azure);
+}
+
+.bg-easy-grey {
+  background-color: var(--easy-grey);
+}
+
+.bg-bayern-blue {
+  background-color: var(--bayern-blue);
+}
+
+.bg-blue-grey {
+  background-color: var(--blue-grey);
+}
+
+.airbnb-red {
+  color: var(--airbnb-red);
+}
+
+.cardinal-red {
+  color: var(--cardinal-red);
 }
 
 .roboto {
   font-family: 'Roboto', sans-serif;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	border: none;
 }
 
 .vertical-center {

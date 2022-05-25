@@ -1,8 +1,8 @@
 import { AutoComplete } from '.'
 import sinon from 'sinon'
-import * as API from '../../api/tradeable-symbols/requests';
-import { act, render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import * as API from '../../api/tradeable-symbols/requests'
+import { act, render } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 jest.mock('react-i18next', () => ({
     useTranslation: () => ({t: (key: any) => key})

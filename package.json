@@ -8,8 +8,9 @@
     "hot-start": "nodemon index.js",
     "client": "cd client && npm run start",
     "test-client": "cd client && npm run test && cd ..",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently --kill-others-on-fail \"npm run hot-start\" \"npm run client\""
+    "dev": "concurrently --kill-others-on-fail \"npm run hot-start\" \"npm run client\"",
+    "test-server": "mocha --recursive test/",
+    "test": "npm run test-client && npm run test-server"
   },
   "author": "",
   "license": "ISC",
@@ -23,5 +24,11 @@
     "express": "^4.18.1",
     "path": "^0.12.7"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "chai-spies": "^1.0.0",
+    "mocha": "^10.0.0",
+    "sinon": "^14.0.0"
+  }
 }
